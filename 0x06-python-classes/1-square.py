@@ -4,6 +4,7 @@ Created on Tue Nov 21 15:59:54 2023
 @author: Igbineweka Osaretin Monday
 """
 
+
 class Square:
     """Class Square that has attributes. Instantiation with size
 
