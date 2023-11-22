@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+import math
 """Magic class from a given ByteCode."""
 """
 Created on wed Nov 22 2:26:23 2023
 @author: Igbineweka Osaretin Monday
 """
-import math
 
 
 class MagicClass:
