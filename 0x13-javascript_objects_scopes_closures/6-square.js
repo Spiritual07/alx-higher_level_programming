@@ -7,7 +7,7 @@ class Square extends SquareK {
       let row = '';
       for (let y = 0; y < this.width; y++) {
         if (c === undefined) {
-          row += 'X';
+          row += 'x';
         } else {
           row += 'c';
         }
