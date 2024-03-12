@@ -1,13 +1,13 @@
 #!/usr/bin/node
-const SquareK = require('./5-square.js');
+const Squarep = require('./5-square.js');
 
-class Square extends SquareK {
+class Square extends Squarep {
   charPrint (c) {
     for (let x = 0; x < this.height; x++) {
       let row = '';
       for (let y = 0; y < this.width; y++) {
         if (c === undefined) {
-          row += 'x';
+          row += 'X';
         } else {
           row += 'c';
         }
