@@ -9,7 +9,7 @@ class Square extends SquareP {
         if (c === undefined) {
           row += 'X';
         } else {
-          row += 'c';
+          row += c;
         }
       }
       console.log(row);
