@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  Add state Louisiana to the database hbtn_0e_0_usa """
+"""  change the name of a State object from the database hbtn_0e_6_usa """
 
 import sys
 from sqlalchemy import create_engine
@@ -7,18 +7,16 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
-def add_state(username, password, database_name):
+def change_state(username, password, database_name):
     engine = create_engine(f"""mysql+mysqldb://{username}:{password}
                             @localhost:3306/{database_name}""")
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    louisiana = State(name="Louisiana")
-    session.add(louisiana)
+    state_to_change = session.query(State).filter(State.id == 2).first()
+    state_to_change.name = 'New Mexico'
     session.commit()
-
-    print(louisiana.id)
 
     session.close()
 
@@ -28,4 +26,4 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database_name = sys.argv[3]
 
-    add_state(username, password, database_name)
+    change_state(username, password, database_name)
