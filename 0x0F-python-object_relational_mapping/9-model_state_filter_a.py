@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  lists all states from the database hbtn_0e_0_usa """
+"""  lists all states that has letter a from the database hbtn_0e_0_usa """
 
 import sys
 from sqlalchemy import create_engine
@@ -14,7 +14,8 @@ def list_states(username, password, database_name):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states = session.query(State).filter(State.name.like('%a%'))\
+        .order_by(State.id).all()
     for state in states:
         print(f"{state.id}: {state.name}")
 
