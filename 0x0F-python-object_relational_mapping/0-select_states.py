@@ -18,8 +18,6 @@ def list_states(username, password, database_name):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        exit(1)
     username = sys.argv[1]
     password = sys.argv[2]
     database_name = sys.argv[3]
