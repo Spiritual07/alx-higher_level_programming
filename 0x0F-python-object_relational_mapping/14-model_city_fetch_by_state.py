@@ -12,6 +12,7 @@ def print_state_by_city(username, password, database_name):
     engine = create_engine(f"mysql+mysqldb://{username}:{password}\
                            @localhost:3306/{database_name}")
 
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
     cities = session.query(City).order_by(City.id).all()
