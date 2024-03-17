@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Class defination of state"""
 
 from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
