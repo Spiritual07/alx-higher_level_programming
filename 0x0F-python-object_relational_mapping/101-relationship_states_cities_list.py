@@ -22,6 +22,8 @@ def list_state_and_city(username, password, database_name):
         for city in state.cities:
             print(f"    {city.id}: {city.name}")
 
+    session.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
