@@ -16,7 +16,7 @@ def list_state_and_city(username, password, database_name):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id).all()
+    states = session.query(State).order_by(State.id)
     for state in states:
         print(f"{state.id}: {state.name}")
         for city in state.cities:
