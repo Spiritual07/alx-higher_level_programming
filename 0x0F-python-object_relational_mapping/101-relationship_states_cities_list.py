@@ -10,6 +10,8 @@ from sqlalchemy import create_engine
 
 
 def list_state_and_city(username, password, database_name):
+    """List state and city method"""
+    
     engine = create_engine(f"mysql+mysqldb://{username}:{password}\
                             @localhost:3306/{database_name}")
     Base.metadata.create_all(engine)
