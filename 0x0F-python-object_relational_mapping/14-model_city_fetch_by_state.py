@@ -21,8 +21,6 @@ def print_state_by_city(username, password, database_name):
                     .filter(State.id == city.state_id).scalar()
         print(f"{state_name}: ({city.id}) {city.name}")
 
-    session.close()
-
 
 if __name__ == "__main__":
     username = sys.argv[1]
