@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Lists all State objects, and corresponding City objects
-"""
+"""Lists all State objects, and corresponding City objects"""
 
 
 import sys
