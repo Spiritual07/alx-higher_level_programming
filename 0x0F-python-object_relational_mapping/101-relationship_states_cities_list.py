@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all State objects, and corresponding City objects, contained
-in the database hbtn_0e_101_usa
+Lists all State objects, and corresponding City objects
 """
 
 
@@ -15,6 +14,7 @@ from sqlalchemy import create_engine
 def list_state_and_city(username, password, database_name):
     engine = create_engine(f"mysql+mysqldb://{username}:{password}\
                             @localhost:3306/{database_name}")
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
