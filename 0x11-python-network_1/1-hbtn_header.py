@@ -7,9 +7,10 @@ the header of the response.
 import sys
 import urllib.request
 
-url = sys.argv[1]
 
 if __name__ == "__main__":
+
+    url = sys.argv[1]
     with urllib.request.urlopen(url) as response:
         x_requested_id = response.headers.get('X-Request-Id')
         print(x_requested_id)
