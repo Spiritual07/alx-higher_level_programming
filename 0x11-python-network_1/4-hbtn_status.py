@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""script that fetches https://alx-intranet.hbtn.io/status using requests packgaes"""
+"""script that fetches https://alx-intranet.hbtn.io/status
+ using requests packgaes
+"""
 
 import requests
 
